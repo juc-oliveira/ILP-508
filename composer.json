@@ -1,0 +1,16 @@
+{
+    "name": "php/primeiroprojeto",
+    "description": "Este é meu primeiro projeto em PHP usando Composer.",
+    "autoload": {
+        "psr-4": {
+            "Php\\Primeiroprojeto\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Juliana Cecília",
+            "email": "juliana.oliveira102@fatec.sp.gov.br"
+        }
+    ],
+    "require": {}
+}
