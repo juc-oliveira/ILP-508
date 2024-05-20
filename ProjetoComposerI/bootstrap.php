@@ -259,29 +259,134 @@ echo $resultado($r->getParams());
 
 #ROTAS-PROJETO-P1
 
-$r->get('/cliente/inserir',
-    'Php\Primeiroprojeto\Controllers\ClienteController@inserir'); 
+    #CLIENTE
 
-$r->post('/cliente/novo',
-    'Php\Primeiroprojeto\Controllers\ClienteController@novo');
+        $r->get('/cliente/inserir',
+            'Php\Primeiroprojeto\Controllers\ClienteController@inserir'); 
 
-$r->get('/cachorro/inserir',
-    'Php\Primeiroprojeto\Controllers\CachorroController@inserir'); 
+        $r->post('/cliente/novo',
+            'Php\Primeiroprojeto\Controllers\ClienteController@novo');
+        
+        $r->get('/cliente',
+            'Php\Primeiroprojeto\Controllers\ClienteController@index');
+    
+        $r->get('/cliente/{acao}/{status}',
+            'Php\Primeiroprojeto\Controllers\ClienteController@index');
+    
+        $r->get('/cliente/alterar/id_cliente/{id_cliente}',
+            'Php\Primeiroprojeto\Controllers\ClienteController@alterar');
+    
+        $r->get('/cliente/excluir/id_cliente/{id_cliente}',
+            'Php\Primeiroprojeto\Controllers\ClienteController@excluir');
+    
+        $r->post('/cliente/editar',
+            'Php\Primeiroprojeto\Controllers\ClienteController@editar');
+    
+        $r->post('/cliente/deletar',
+        'Php\Primeiroprojeto\Controllers\ClienteController@deletar');
+        
 
-$r->post('/cachorro/novo',
-    'Php\Primeiroprojeto\Controllers\cachorroController@novo');
+    #CACHORRO
+        $r->get('/cachorro/inserir',
+            'Php\Primeiroprojeto\Controllers\CachorroController@inserir'); 
 
-$r->get('/cavalo/inserir',
-    'Php\Primeiroprojeto\Controllers\cavaloController@inserir');
+        $r->post('/cachorro/novo',
+            'Php\Primeiroprojeto\Controllers\cachorroController@novo');
+    
+        $r->get('/cachorro',
+            'Php\Primeiroprojeto\Controllers\CachorroController@index');
+    
+        $r->get('/cachorro/{acao}/{status}',
+            'Php\Primeiroprojeto\Controllers\CachorroController@index');
+    
+        $r->get('/cachorro/alterar/id_cachorro/{id_cachorro}',
+            'Php\Primeiroprojeto\Controllers\CachorroController@alterar');
+    
+        $r->get('/cachorro/excluir/id_cachorro/{id_cachorro}',
+            'Php\Primeiroprojeto\Controllers\CachorroController@excluir');
+    
+        $r->post('/cachorro/editar',
+            'Php\Primeiroprojeto\Controllers\CachorroController@editar');
+    
+        $r->post('/cachorro/deletar',
+        'Php\Primeiroprojeto\Controllers\CachorroController@deletar');
 
-$r->post('/cavalo/novo',
-    'Php\Primeiroprojeto\Controllers\cavaloController@novo');
+    #CAVALO
+        $r->get('/cavalo/inserir',
+            'Php\Primeiroprojeto\Controllers\cavaloController@inserir');
 
-$r->get('/gato/inserir',
-    'Php\Primeiroprojeto\Controllers\gatoController@inserir'); 
+        $r->post('/cavalo/novo',
+            'Php\Primeiroprojeto\Controllers\cavaloController@novo');
 
-$r->post('/gato/novo',
-    'Php\Primeiroprojeto\Controllers\gatoController@novo');
+        $r->get('/cavalo',
+            'Php\Primeiroprojeto\Controllers\cavaloController@index');
+    
+        $r->get('/cavalo/{acao}/{status}',
+            'Php\Primeiroprojeto\Controllers\cavaloController@index');
+    
+        $r->get('/cavalo/alterar/id_cavalo/{id_cavalo}',
+            'Php\Primeiroprojeto\Controllers\cavaloController@alterar');
+    
+        $r->get('/cavalo/excluir/id_cavalo/{id_cavalo}',
+            'Php\Primeiroprojeto\Controllers\cavaloController@excluir');
+    
+        $r->post('/cavalo/editar',
+            'Php\Primeiroprojeto\Controllers\cavaloController@editar');
+    
+        $r->post('/cavalo/deletar',
+        'Php\Primeiroprojeto\Controllers\cavaloController@deletar');
+
+
+    #GATO
+        $r->get('/gato/inserir',
+            'Php\Primeiroprojeto\Controllers\gatoController@inserir'); 
+
+        $r->post('/gato/novo',
+            'Php\Primeiroprojeto\Controllers\gatoController@novo');
+
+        $r->get('/gato',
+            'Php\Primeiroprojeto\Controllers\gatoController@index');
+    
+        $r->get('/gato/{acao}/{status}',
+            'Php\Primeiroprojeto\Controllers\gatoController@index');
+    
+        $r->get('/gato/alterar/id_gato/{id_gato}',
+            'Php\Primeiroprojeto\Controllers\gatoController@alterar');
+    
+        $r->get('/gato/excluir/id_gato/{id_gato}',
+            'Php\Primeiroprojeto\Controllers\gatoController@excluir');
+    
+        $r->post('/gato/editar',
+            'Php\Primeiroprojeto\Controllers\gatoController@editar');
+    
+        $r->post('/gato/deletar',
+        'Php\Primeiroprojeto\Controllers\gatoController@deletar');
+
+    #CATEGORIA
+
+        $r->get('/categoria/inserir',
+            'Php\Primeiroprojeto\Controllers\CategoriaController@inserir'); 
+
+        $r->post('/categoria/novo',
+            'Php\Primeiroprojeto\Controllers\CategoriaController@novo');
+
+        $r->get('/categoria',
+            'Php\Primeiroprojeto\Controllers\CategoriaController@index');
+
+        $r->get('/categoria/{acao}/{status}',
+            'Php\Primeiroprojeto\Controllers\CategoriaController@index');
+
+        $r->get('/categoria/alterar/id/{id}',
+            'Php\Primeiroprojeto\Controllers\CategoriaController@alterar');
+
+        $r->get('/categoria/excluir/id/{id}',
+            'Php\Primeiroprojeto\Controllers\CategoriaController@excluir');
+
+        $r->post('/categoria/editar',
+            'Php\Primeiroprojeto\Controllers\CategoriaController@editar');
+
+        $r->post('/categoria/deletar',
+        'Php\Primeiroprojeto\Controllers\CategoriaController@deletar');
 
 
 
